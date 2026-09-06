@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Someone Special 💐</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff1f5, #ffe3ec);
+    font-family: Georgia, serif;
+    color: #5c3a45;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.small {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fade 1.5s forwards;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fade 1.5s .5s forwards;
+}
+
+.intro {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fade 1.5s 1s forwards;
+}
+
+/* BOUQUET */
+
+.bouquet {
+    position: relative;
+    width: 280px;
+    height: 270px;
+    margin: 10px auto;
+}
+
+.flower {
+    position: absolute;
+    font-size: 55px;
+    animation: flowerFloat 3s infinite ease-in-out;
+}
+
+.flower1 {
+    left: 25px;
+    top: 55px;
+}
+
+.flower2 {
+    left: 105px;
+    top: 15px;
+    animation-delay: .4s;
+}
+
+.flower3 {
+    right: 25px;
+    top: 55px;
+    animation-delay: .8s;
+}
+
+.flower4 {
+    left: 65px;
+    top: 100px;
+    animation-delay: .6s;
+}
+
+.flower5 {
+    right: 65px;
+    top: 105px;
+    animation-delay: 1s;
+}
+
+.stem {
+    position: absolute;
+    width: 5px;
+    height: 130px;
+    background: #64845f;
+    bottom: 35px;
+    left: 50%;
+    border-radius: 10px;
+    transform: rotate(-3deg);
+}
+
+.ribbon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+}
+
+/* BUTTON */
+
+.openButton {
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+    background: #d76b8a;
+    color: white;
+    font-size: 16px;
+    font-family: Georgia, serif;
+    box-shadow: 0 8px 20px rgba(100,50,70,.2);
+    cursor: pointer;
+    animation: fade 1.5s 1.5s forwards;
+    opacity: 0;
+}
+
+.openButton:active {
+    transform: scale(.95);
+}
+
+/* LETTER */
+
+.letter {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: rgba(255,255,255,.85);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(100,50,70,.12);
+    text-align: left;
+}
+
+.letter.show {
+    display: block;
+    animation: letterOpen 1s ease;
+}
+
+.letter h2 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.letter p {
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 20px;
+}
+
+/* FALLING HEARTS */
+
+.heart {
+    position: fixed;
+    top: -30px;
+    font-size: 22px;
+    pointer-events: none;
+    animation: fall 4s linear forwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flowerFloat {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes letterOpen {
+    from {
+        opacity: 0;
+        transform: scale(.85) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="card">
+
+<div class="small">
+A LITTLE SURPRISE FOR YOU
+</div>
+
+<h1>💐 For Someone Special 💐</h1>
+
+<p class="intro">
+There is something I've been wanting to tell you...
+</p>
+
+<div class="bouquet">
+
+<div class="flower flower1">🌷</div>
+<div class="flower flower2">🌹</div>
+<div class="flower flower3">🌸</div>
+<div class="flower flower4">🌷</div>
+<div class="flower flower5">🌹</div>
+
+<div class="stem"></div>
+
+<div class="ribbon">🎀</div>
+
+</div>
+
+<button class="openButton" id="openButton">
+Open My Letter 💌
+</button>
+
+<div class="letter" id="letter">
+
+<h2>💌 A Letter For You</h2>
+
+<p>
+Dear you,
+</p>
+
+<p>
+There is something I've been keeping to myself for a while.
+I wasn't really sure how to say it, so I decided to write it instead.
+</p>
+
+<p>
+Somewhere along the way, I started to like you.
+I really enjoy the little moments we share, and somehow,
+you became someone special to me.
+</p>
+
+<p>
+I don't expect anything from you. I just wanted to be honest
+about how I feel.
+</p>
+
+<p>
+So, here it is...
+<strong>I like you. ❤️</strong>
+</p>
+
+<p>
+Whatever you feel about this, I'll respect it.
+I just hope this little surprise makes you smile.
+</p>
+
+<p class="signature">
+— From JM 🌷
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const button = document.getElementById("openButton");
+    const letter = document.getElementById("letter");
+
+    button.addEventListener("click", function() {
+
+        letter.classList.add("show");
+
+        button.style.display = "none";
+
+        for (let i = 0; i < 25; i++) {
+
+            const heart = document.createElement("div");
+
+            heart.className = "heart";
+            heart.innerHTML = "💗";
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDelay = Math.random() * 1.5 + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(function() {
+                heart.remove();
+            }, 5000);
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
